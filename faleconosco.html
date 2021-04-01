@@ -1,0 +1,163 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta lang="pt-br">
+        <title> Fire Game</title>
+        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+        <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            h1, .titulos{
+                margin: auto;
+                margin-top: 1%;
+                margin-bottom: 1%;
+                text-align: center;
+                color: lemonchiffon;
+                background-color: #FF6600;
+                border-bottom: 4px solid #353535;
+                width: 30%;
+                padding: 3px;
+                border-radius: 15px;
+                font-size: 1.7em;
+            }
+            form{
+                border:1px solid #FF6600;
+                width: 60%;
+                margin:auto;
+                padding: 1%;
+            }
+            .formu{
+                width: 80%;
+                margin: auto;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+            input, textarea{
+                border:#FF6600 1px solid;
+                font-family: Verdana;
+                padding: 10px;
+                border-radius: 10px;
+                color: #FF6600;
+                background-color: #373d47;
+            }
+            label{
+                font-family: Verdana;
+            }
+            input[type='file'] {
+                display: none;
+            }
+            input[type='submit']:hover {
+                background-color: #373d47;
+            }
+            input[type='reset'] {
+                background-color: #FF6600;
+                color: #1e2228;
+                border:#1e2228 1px solid;
+                margin-left: 3px;
+            }
+            input[type='reset']:hover {
+                background-color: #b64900;
+            }
+            input[type='submit'] {
+                background-color: #1e2228;
+                border: 1px solid #FF6600 ;
+            }
+
+            .arquivo {
+                background-color: #1e2228;
+                border-radius: 5px;
+                border: 1px solid #FF6600;
+                color: #ff6600;
+                margin: 10px;
+                padding: 6px 20px
+            }
+
+            .arquivo:hover {
+                background-color: #373d47;
+            }
+        </style>
+    </head>
+    <body style="background-color: #1e2228; color: lemonchiffon;">
+        <div class="topo">
+            <nav>
+                <a href="faleconosco.html"><i style="color: #FFFFFF;"><span class="iconify" data-icon="bi:chat-dots" data-inline="false"></span></i>Fale Conosco</a>
+                <a href="tel:+5581995394296"> <i style="color: #353535;"><span class="iconify" data-icon="bi:telephone-fill" data-inline="false"></span></i> Telefone</a>
+                <a href=""> <i style="color: #e22c68;"><span class="iconify" data-icon="mdi-instagram" data-inline="false"></span></i> Instagram</a>
+                <a href=""><i style="color: #2f55a4;"><span class="iconify" data-icon="ant-design:facebook-filled" data-inline="false"></span></i> Facebook</a>
+            </nav>
+        </div>
+        <div class="musica">
+            <audio controls autoplay preload="metadata" style="margin:auto;">
+                <source src="audio/10convert.com_a-ha-Take-On-Me-Live-From-MTV-Unplugged_-xKM3mGt2pE.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="titulo">
+            <h2 style="width: 33%;" id="logo"> <a href="index.html">&#127918;Fire Game</a> </h2>
+            <div style="width: 75%; float: right; margin-left: 60%; border: 1px solid #FF6600; display: flex;">
+                <input type="search" id="pesquisa" placeholder="Tudo o que precisa, aqui" style=" width:88%; height: 3.2em; border:none; color:#FF6600; background-color: #1e2228; padding: 5px;">
+                <label for="#pesquisa" style="float: right;">
+                    <button id="botpesquisa" style="padding: 1em; background-color: #FF6600; border: none; margin: none;">
+                        <i><span class="iconify" data-icon="bi:search" data-inline="false"></span></i>
+                    </button>
+                </label>
+            </div>
+            
+        </div>
+        <div class="menu">
+            <h3>História</h3>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="playstation.html">Playstation</a>
+                <a href="xbox.html">Xbox</a>
+                <a href="#" style="color: #a5a5a5;">Nintendo</a>
+                <a href="#" style="color: #a5a5a5;">PC</a>
+                <a href="#" style="color: #a5a5a5;">Mobile</a>
+            </nav>
+        </div>
+
+        <div style="width: 95%; margin:auto; background-color: #20252c; text-align: center; padding: .3rem; opacity: .97;">
+            <h2>Fale Conosco</h2>
+            <form action="" style="display: flex; flex-direction: column;">
+                <div class="formu">
+                    <label for="nome">Nome:</label> <input type="text" placeholder="Digite seu nome" name="nome" id="nome" pattern="[A-Za-z'\s+]{0,}" title="Apenas letras" required>
+                </div>
+                <div class="formu">
+                    <label for="Email">Email:</label> <input type="email" placeholder="Digite seu email" name="email"  pattern="[A-Za-z0-9'@._\-]{0,}" id="Email" required>
+                </div>
+                <div class="formu">
+                    <label for="telefone">Telefone:</label> <input type="tel" placeholder="Digite seu Telefone" title="Apenas Números" pattern="[0-9]{0, }" name="tel" id="telefone" required>
+                </div>
+                <div class="formu">
+                    <input type="radio" name="genero" value="masculino" required><label for="genero">Masculino</label>
+                    <input type="radio" name="genero" value="feminino" required><label for="genero">Feminino</label> 
+                </div>
+                <div class="formu"> 
+                    <input type="checkbox" id="novi" name="novi" value="yes">
+                    <label for="novi">Receber novidades por email</label>
+                </div>
+                <div class="formu">
+                    <label for="datanas">Data de nascimento:</label> <input type="date" id="datanas">
+                </div>
+                <div class="formu">
+                    <label class="" for="inter">Quantos consoles você tem: </label><input style="width: 7%;" type="number" min="1" step="1" id="inter">
+                </div>
+                <div class="formu">
+                    <label class="arquivo" for="arquivo">Foto do Seu console</label><input type="file" id="arquivo" accept="image/*">
+                </div>
+                <div class="formu">
+                    <label class="" for="cor">Escreva sua mensagem: </label><br><br><textarea name="mensagem" id="cor" cols="30" rows="10"></textarea>
+                </div>
+                <div class="formu">
+                    <input type="submit" value="Enviar Mensagem">
+                    <input type="reset" value="Apagar tudo">
+                </div>
+            </form>
+        </div>
+        <footer> 
+            &copy; Valdemir Lucas
+            <br> <small>Todos os direitos reservados</small>
+        </footer>
+    </body>
+</html>
